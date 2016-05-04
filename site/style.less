@@ -1,0 +1,854 @@
+/*-------------------------------------------------------------------------
+ * Autor: German Mendoza
+ * correo: german.mendoza.187@gmail.com
+ * Fecha de publicación: 14/01/2015
+ * Version: 1.0
+ * Copyright: German Mendoza, en caso de distribución colocar mis referencias
+ * Descripcion: Colores para la página
+ *
+ *   DEPENDENCIAS
+ *  - bootstrap.css
+ *  - colors.less
+ *
+ *-------------------------------------------------------------------------*/
+@import './less/color.less';
+@import './less/mixins.less';
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+.no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.no-border{
+    border-left: 0px !important;
+    border-top: 0px !important;
+    border-right: 0px !important;
+    border-bottom: 0px !important;
+}
+
+.border-right{
+    border-right: 1px solid;
+    border-color: @gray-font;
+}
+
+.container-logo{
+    position: absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.g-cnt-nav{
+    background: transparent;
+    border-bottom: 2px solid;
+    border-color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: @white-font;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: @white-font;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+    color: @white-font;
+    background-color: transparent;
+}
+
+.g-menu-bar{
+    margin-top: 40px;
+}
+
+.g-title{
+    margin-top: 40px;
+    color:  @gold-font;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.g-div-center{
+    margin: auto;
+    width: 40px;
+    border: 2px solid;
+    border-color: @gold-font;
+    height: 1px;
+    background-color: @gold-font;
+    margin-bottom: 50px;
+}
+
+
+.g-navbar-global{
+    margin-bottom: 0px;
+    border-bottom: 0px;
+    border: 0px solid;
+    background: transparent;
+    .box-shadow(none);
+
+    .navbar-brand {
+        height: auto;
+        padding: 0px;
+    }
+}
+
+.g-img-front{
+
+    img{
+        float: right;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+.g-img{
+    img{
+        width: 100%;
+    }
+
+}
+
+.g-t{
+    margin-bottom: 40px;
+}
+
+.g-t-text{
+    height: 250px;
+
+    h2{
+        font-size: 23px;
+    }
+}
+
+.g-t-img{
+    height: 250px;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+    }
+}
+
+.g-white{
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background: white;
+
+    h1, h2{
+        font-weight: bold;
+    }
+}
+
+.g-black{
+    padding-top: 00px;
+    padding-bottom: 20px;
+    background: black;
+    text-align: center;
+}
+
+.g-gray{
+    background: @gray-light-bg;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h1, h2{
+        font-weight: bold;
+    }
+
+}
+
+.g-form-inline{
+
+    margin-top: 30px;
+
+    label{
+        color:white;
+        font-size: 15px;
+        letter-spacing: 3px;
+        margin-right: 10px;
+    }
+
+    input{
+        background: @gray-form;
+        .border-radiuses (0px, 0px, 5px, 5px);
+
+        border: 0px solid;
+    }
+
+    button{
+        margin-left: -3px;
+        .border-radiuses (5px, 5px, 0px, 0px);
+        background: @gold-font;
+        color: white;
+        border-color: @gold-font;
+    }
+}
+
+.g-list{
+    margin-top: 30px;
+    li{
+        display: inline;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-right: 1px solid;
+        border-color: white;
+        color: white;
+
+        a{
+            color: white;
+        }
+    }
+    li:last-child{
+        border-right: 0px solid;
+    }
+
+    .no-separator{
+
+        border-right: 0px solid;
+        padding-left: 5px;
+        padding-right: 5px;
+
+    }
+
+}
+
+.g-footer{
+    p{
+        margin-top: 50px;
+        color: white;
+    }
+
+}
+
+.carousel-control.left{
+    background-image: none;
+    width: 50px;
+}
+
+.carousel-control.right{
+    background-image: none;
+    width: 50px;
+}
+
+.g-a-left{
+    background-image: url('./images/a-left.png');
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+}
+
+
+.g-a-right{
+    background-image: url('./images/a-right.png');
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+}
+
+.g-price {
+    .g-currency{
+        font-size: 40px;
+
+    }
+    .g-int{
+        font-size: 60px;
+        font-weight: bold;
+    }
+    .g-dec{
+        position: absolute;
+        font-size: 27px;
+        margin-top: 15px;
+        font-weight: bold;
+        margin-left: 15px;
+    }
+    .g-pack{
+        font-size: 20px;
+        margin-top: 45px;
+        position: absolute;
+        margin-left: 15px;
+    }
+}
+
+.g-bg-light-gray{
+
+    background: @gray-light-bg;
+
+}
+
+.g-light-gray{
+    span{
+        color: @gray-light-font;
+    }
+}
+
+.g-color-white{
+    span{
+        color: white;
+    }
+}
+
+.g-bg-white > span:before,
+.g-bg-white > span:after {
+    border-color: white !important;
+}
+
+.g-center{
+    text-align: center;
+}
+
+.g-btn{
+    margin-top: 35px;
+
+    button{
+        background: white;
+        border: 2px solid;
+        font-size: 13px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border-color: @gold-font;
+        color: @gold-font;
+        font-weight: bold;
+        .border-radiuses (5px, 5px, 5px, 5px);
+
+    }
+}
+
+
+
+.fancy {
+  text-align: center;
+  overflow: hidden;
+}
+.fancy > span {
+  display: inline-block;
+  position: relative;
+}
+.fancy > span:before,
+.fancy > span:after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid;
+  border-color: @gray-light-font;
+  top: 50%;
+  width: 700px;
+}
+.fancy > span:before {
+  right: 100%;
+  margin-right: 25px;
+}
+.fancy > span:after {
+  left: 100%;
+  margin-left: 25px;
+}
+.g-tips{
+    text-align: center;
+
+    img{
+        margin-top: 40px;
+    }
+
+    p{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    span{
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+}
+
+
+.g-card{
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 300px;
+    span{
+        margin-top: 10px;
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    h5{
+        margin-top: 100px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    p{
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .g-div-center{
+        margin: auto;
+        width: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+.g-card-gray {
+    background: @gray-card;
+    span{
+        color: white;
+    }
+
+    h5{
+        color: white;
+    }
+
+    p{
+        color: white;
+    }
+
+    .g-div-center{
+        border-color: white;
+        background: white;
+    }
+}
+
+.g-card-gray-light {
+    background: @gray-light-bg;
+    span{
+        color: @gray-card;
+    }
+
+    h5{
+        color: @gray-card;
+    }
+
+    p{
+        color: @gray-card;
+    }
+
+    .g-div-center{
+        border-color: @gray-card;
+        background: @gray-card;
+    }
+}
+
+
+
+
+
+
+
+.gym-footer{
+    margin-top: 50px;
+    padding-bottom: 50px;
+    background: @gray-light-fotter;
+    background-image: url('./images/background-footer.png');
+    background-repeat: no-repeat;
+    background-position: -50px -50px;
+
+
+    .gym-footer-r{
+        margin-top: 50px;
+        padding-left: 80px;
+        border-left: 1px solid;
+        border-left-style: dotted;
+        border-color: @yellow-brand;
+
+        h3{
+            font-size: 15px;
+            color: @white-font;
+            font-weight: lighter;
+        }
+
+        .gym-footer-righs{
+            margin-top: 20px;
+            color: @white-font;
+            border-top: 2px solid @gray-light-bg;
+            padding-top: 25px;
+
+            p{
+                margin-top: 5px;
+                color: @white-font;
+                margin-bottom: 0px;
+                font-weight: lighter;
+            }
+
+            a{
+                color: @white-font;
+                font-weight: lighter;
+                letter-spacing: 1;
+            }
+        }
+    }
+
+    .gym-footer-l{
+        margin-top: 50px;
+
+        h3{
+            border-bottom: 2px solid @gray-light-bg;
+            padding-bottom: 7px;
+            margin-right: 50px;
+        }
+
+    }
+}
+
+
+@media (max-width: 767px){
+
+    .gym-nav-bar{
+        .container{
+            .navbar-header{
+                .navbar-brand{
+
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .gym-button{
+
+
+        input{
+            width: 200px;
+            text-align: left;
+        }
+    }
+
+    .gym-titles{
+        h1{
+
+            font-size: 10px;
+            letter-spacing: 1px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+    }
+
+    .gym-arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #f00;
+    }
+
+    .gym-menu-bar{
+        margin-left: 0px;
+        li{
+            padding-left: 0px;
+
+            .dropdown-menu{
+
+
+                li{
+
+                    width: 100%;
+                    list-style-type: none;
+
+                    a:hover{
+                        list-style-type: none;
+
+                    }
+
+                }
+            }
+        }
+
+        li.open{
+            margin-left: -15px;
+            padding-left: 15px;
+            height: auto;
+
+
+            a:focus{
+                boder: 0px solid !important;
+            }
+
+            ul{
+                position: absolute !important;
+                background: @white-font !important;
+            }
+
+            .dropdown-menu{
+                width: 100%;
+            }
+        }
+
+    }
+
+    .losange, .losange div {
+        border: 2px solid;
+        border-color: @yellow-brand;
+        float: left;
+        margin-top: 5px;
+        margin-bottom: 2px;
+        margin-left: 2px;
+        transform-origin: 50% 50%;
+        width: 30px;
+        height: 30px;
+    }
+    .losange {
+      transform: rotate(45deg) translateY(10px);
+    }
+    .losange .los1 {
+      width: 40px;
+      height: 40px;
+      transform: rotate(-45deg) translateY(-15px) translateX(2px);
+    }
+
+
+    .gym-header-session{
+
+        .gym-prof-link {
+            float: left;
+            margin-top: 15px;
+            margin-left: 5px;
+            font-size: 12px;
+
+            div{
+                width: 90px;
+            }
+
+            img{
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+
+        }
+
+         label{
+            margin-top: 0px;
+            margin-left: 36px;
+            letter-spacing: 0px;
+            font-size: 12px;
+        }
+
+        .gym-num-sesion-cnt{
+
+            .gym-num-sesion{
+                width: 40px;
+                height: 40px;
+                margin-top: 10px;
+                a{
+                    font-size: 12px;
+                }
+            }
+
+            label{
+
+                padding-right: 0px;
+                border-right: 0px solid;
+                margin-left: 5px;
+                font-size: 9px;
+                margin-top: 15px;
+            }
+
+            span{
+                font-size: 10px;
+            }
+        }
+
+        .gym-cnt-btn-head{
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+    }
+
+    .gym-corouse{
+        min-height: auto;
+
+        #carousel-example-generic{
+            padding-top: 138px;
+        }
+
+        .carousel-control{
+            background: black;
+            height: 90px;
+            width: 50px;
+            margin-top: 0px;
+        }
+
+    }
+
+    .gym-benefits{
+
+        .gym-benefits-text{
+            border-right: 0px solid;
+            height: 230px;
+            img{
+                margin-top: 10px;
+                width: 50px;
+            }
+
+            .gym-ben-promo{
+                margin-top: 10px;
+                letter-spacing: 1;
+                font-weight: lighter;
+                font-size: 14px;
+            }
+
+            .gym-ben-exp{
+                font-size: 12px;
+                font-weight: lighter;
+                margin-top: 0px;
+                padding-bottom: 15px;
+
+            }
+        }
+    }
+
+    .gym-plans{
+        margin-top: 0px;
+
+        .gym-plan-cnt{
+
+
+
+            .gym-plan-title{
+
+                h2{
+
+                    font-size: 12px;
+                }
+
+            }
+        }
+
+
+
+        .gym-plan-3{
+
+            p{
+                margin-bottom: 20px;
+            }
+
+        }
+
+        .gym-plan-fot{
+            p{
+
+                margin-top: 20px;
+                margin-left: 20px;
+
+            }
+
+        }
+
+
+    }
+
+    .gym-networks{
+
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+        .gym-networks-link{
+
+            .gym-link-cnt{
+                margin-left: 0px;
+
+
+                a{
+                    color: @yellow-brand;
+                    font-size: 11px;
+
+                    img{
+                        margin-left: 15px;
+                        width: 50px;
+                        display: block;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+    .gym-headquarters{
+
+        .gym-hq-cnt{
+
+            margin-top: 2px;
+
+            .gym-cover{
+                bottom:0px;
+
+                .gym-icon-sede{
+                    margin-top: 20%;
+                }
+            }
+        }
+    }
+
+    .gym-galery{
+        margin-top: 0px;
+
+
+
+        .gym-filters{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 3;
+
+            a{
+
+                margin-right: 12px;
+                margin-left: 14px;
+            }
+        }
+
+        .gym-galery-images{
+            img{
+                width: 100%;
+            }
+
+        }
+    }
+
+    .gym-footer{
+        margin-top: 0px;
+        padding-bottom: 50px;
+
+        .gym-footer-r{
+            margin-top: 20px;
+            padding-left: 20px;
+
+
+            h3{
+                margin-left: 10px;
+            }
+
+
+        }
+
+        .gym-footer-l{
+            margin-top: 0px;
+            min-height: 300px;
+
+            h3{
+                margin-right: 0px;
+            }
+
+        }
+    }
+
+}
