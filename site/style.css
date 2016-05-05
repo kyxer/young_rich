@@ -69,6 +69,14 @@
 .g-menu-bar {
   margin-top: 40px;
 }
+.g-menu-bar li a {
+  border: 1px solid;
+  border-color: transparent;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 25px;
+  padding-left: 25px;
+}
 .g-title {
   margin-top: 40px;
   color: #c9930d;
@@ -84,6 +92,62 @@
   height: 1px;
   background-color: #c9930d;
   margin-bottom: 50px;
+}
+.dropdown .dropdown-menu {
+  top: 71px;
+  box-shadow: none;
+  border: 0px solid;
+  left: -221px;
+  width: 340px;
+  height: 230px;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+.dropdown .form-group {
+  margin-bottom: 15px;
+  margin-top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+.dropdown .form-group input {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.dropdown .form-group button {
+  background: #c9930d;
+  color: white;
+  border: 0px solid;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 13px;
+  font-weight: bold;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.dropdown.open a {
+  background: transparent !important;
+  border: 1px solid;
+  border-color: #c9930d;
+  color: #c9930d !important;
+}
+.dropdown.open .g-link-form {
+  border: 0px solid;
+  color: white !important;
+  text-align: center;
+  font-size: 13px;
+  margin-left: 50px;
 }
 .g-navbar-global {
   margin-bottom: 0px;
@@ -398,264 +462,149 @@
   border-color: #3c3c3b;
   background: #3c3c3b;
 }
-.gym-footer {
-  margin-top: 50px;
-  padding-bottom: 50px;
-  background: #63666a;
-  background-image: url('images/background-footer.png');
-  background-repeat: no-repeat;
-  background-position: -50px -50px;
+.g-aph-o {
+  display: inline;
+  width: 50px;
+  height: 50px;
+  background-image: url('images/aph-o.png');
 }
-.gym-footer .gym-footer-r {
-  margin-top: 50px;
-  padding-left: 80px;
-  border-left: 1px solid;
-  border-left-style: dotted;
-  border-color: #ffe900;
+.g-aph-c {
+  display: inline;
+  width: 50px;
+  height: 50px;
+  background-image: url('images/aph-c.png');
 }
-.gym-footer .gym-footer-r h3 {
-  font-size: 15px;
+.g-menu-login {
+  background: black;
+  font-size: 50px;
   color: white;
-  font-weight: lighter;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
 }
-.gym-footer .gym-footer-r .gym-footer-righs {
-  margin-top: 20px;
+.g-menu-login .g-align-r {
+  display: block;
+  text-align: right;
+  margin-right: 20px;
+}
+.g-menu-login .g-align-r:hover {
+  text-decoration: none;
+}
+.g-menu-login a {
   color: white;
-  border-top: 2px solid #d9d9d9;
-  padding-top: 25px;
 }
-.gym-footer .gym-footer-r .gym-footer-righs p {
-  margin-top: 5px;
-  color: white;
-  margin-bottom: 0px;
-  font-weight: lighter;
+.g-menu-login ul li {
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  padding-bottom: 20px;
 }
-.gym-footer .gym-footer-r .gym-footer-righs a {
-  color: white;
-  font-weight: lighter;
-  letter-spacing: 1;
+.g-menu-login ul li a:hover {
+  text-decoration: none;
 }
-.gym-footer .gym-footer-l {
-  margin-top: 50px;
+.g-menu-login .g-div-center {
+  margin-bottom: 5px;
+  background: white;
+  border-color: white;
 }
-.gym-footer .gym-footer-l h3 {
-  border-bottom: 2px solid #d9d9d9;
-  padding-bottom: 7px;
-  margin-right: 50px;
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
 }
-@media (max-width: 767px) {
-  .gym-nav-bar .container .navbar-header .navbar-brand img {
-    height: 100%;
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+  background: #00d9ff;
+}
+@media (max-width: 768px) {
+  .hidden-xs {
+    display: none;
   }
-  .gym-button input {
-    width: 200px;
-    text-align: left;
+  .g-menu-login {
+    font-size: 30px;
+    overflow: auto;
   }
-  .gym-titles h1 {
-    font-size: 10px;
-    letter-spacing: 1px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+  .g-menu-bar {
+    margin-top: 0px;
   }
-  .gym-arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #f00;
+  .navbar-collapse {
+    width: 109%;
   }
-  .gym-menu-bar {
-    margin-left: 0px;
+  .navbar-brand img {
+    height: 50px;
   }
-  .gym-menu-bar li {
-    padding-left: 0px;
-  }
-  .gym-menu-bar li .dropdown-menu li {
+  .g-img-front img {
+    float: none;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 20px;
     width: 100%;
-    list-style-type: none;
   }
-  .gym-menu-bar li .dropdown-menu li a:hover {
-    list-style-type: none;
+  .g-white {
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
-  .gym-menu-bar li.open {
-    margin-left: -15px;
-    padding-left: 15px;
+  .g-img-inf {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .g-img-car {
+    text-align: center;
+  }
+  .g-text-car {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .g-a-left {
+    left: 10px;
+  }
+  .g-a-right {
+    right: 10px;
+  }
+  .g-res-center {
+    text-align: center;
+  }
+  .g-t-img {
     height: auto;
   }
-  .gym-menu-bar li.open a:focus {
-    boder: 0px solid !important;
-  }
-  .gym-menu-bar li.open ul {
-    position: absolute !important;
-    background: white !important;
-  }
-  .gym-menu-bar li.open .dropdown-menu {
-    width: 100%;
-  }
-  .losange,
-  .losange div {
-    border: 2px solid;
-    border-color: #ffe900;
-    float: left;
-    margin-top: 5px;
-    margin-bottom: 2px;
-    margin-left: 2px;
-    transform-origin: 50% 50%;
-    width: 30px;
-    height: 30px;
-  }
-  .losange {
-    transform: rotate(45deg) translateY(10px);
-  }
-  .losange .los1 {
-    width: 40px;
-    height: 40px;
-    transform: rotate(-45deg) translateY(-15px) translateX(2px);
-  }
-  .gym-header-session .gym-prof-link {
-    float: left;
-    margin-top: 15px;
-    margin-left: 5px;
-    font-size: 12px;
-  }
-  .gym-header-session .gym-prof-link div {
-    width: 90px;
-  }
-  .gym-header-session .gym-prof-link img {
-    margin-top: 0px;
-    margin-left: 0px;
-  }
-  .gym-header-session label {
-    margin-top: 0px;
-    margin-left: 36px;
-    letter-spacing: 0px;
-    font-size: 12px;
-  }
-  .gym-header-session .gym-num-sesion-cnt .gym-num-sesion {
-    width: 40px;
-    height: 40px;
-    margin-top: 10px;
-  }
-  .gym-header-session .gym-num-sesion-cnt .gym-num-sesion a {
-    font-size: 12px;
-  }
-  .gym-header-session .gym-num-sesion-cnt label {
-    padding-right: 0px;
-    border-right: 0px solid;
-    margin-left: 5px;
-    font-size: 9px;
-    margin-top: 15px;
-  }
-  .gym-header-session .gym-num-sesion-cnt span {
-    font-size: 10px;
-  }
-  .gym-header-session .gym-cnt-btn-head {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .gym-corouse {
-    min-height: auto;
-  }
-  .gym-corouse #carousel-example-generic {
-    padding-top: 138px;
-  }
-  .gym-corouse .carousel-control {
-    background: black;
-    height: 90px;
-    width: 50px;
-    margin-top: 0px;
-  }
-  .gym-benefits .gym-benefits-text {
-    border-right: 0px solid;
-    height: 230px;
-  }
-  .gym-benefits .gym-benefits-text img {
-    margin-top: 10px;
-    width: 50px;
-  }
-  .gym-benefits .gym-benefits-text .gym-ben-promo {
-    margin-top: 10px;
-    letter-spacing: 1;
-    font-weight: lighter;
-    font-size: 14px;
-  }
-  .gym-benefits .gym-benefits-text .gym-ben-exp {
-    font-size: 12px;
-    font-weight: lighter;
-    margin-top: 0px;
-    padding-bottom: 15px;
-  }
-  .gym-plans {
-    margin-top: 0px;
-  }
-  .gym-plans .gym-plan-cnt .gym-plan-title h2 {
-    font-size: 12px;
-  }
-  .gym-plans .gym-plan-3 p {
-    margin-bottom: 20px;
-  }
-  .gym-plans .gym-plan-fot p {
-    margin-top: 20px;
-    margin-left: 20px;
-  }
-  .gym-networks {
+  .g-t-text {
+    height: auto;
+    padding-top: 1px;
     padding-bottom: 20px;
-    padding-top: 20px;
   }
-  .gym-networks .gym-networks-link .gym-link-cnt {
-    margin-left: 0px;
-  }
-  .gym-networks .gym-networks-link .gym-link-cnt a {
-    color: #ffe900;
-    font-size: 11px;
-  }
-  .gym-networks .gym-networks-link .gym-link-cnt a img {
-    margin-left: 15px;
-    width: 50px;
-    display: block;
-  }
-  .gym-headquarters .gym-hq-cnt {
-    margin-top: 2px;
-  }
-  .gym-headquarters .gym-hq-cnt .gym-cover {
-    bottom: 0px;
-  }
-  .gym-headquarters .gym-hq-cnt .gym-cover .gym-icon-sede {
-    margin-top: 20%;
-  }
-  .gym-galery {
-    margin-top: 0px;
-  }
-  .gym-galery .gym-filters {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 12px;
-    line-height: 3;
-  }
-  .gym-galery .gym-filters a {
-    margin-right: 12px;
-    margin-left: 14px;
-  }
-  .gym-galery .gym-galery-images img {
+  .g-card {
     width: 100%;
-  }
-  .gym-footer {
-    margin-top: 0px;
-    padding-bottom: 50px;
-  }
-  .gym-footer .gym-footer-r {
-    margin-top: 20px;
-    padding-left: 20px;
-  }
-  .gym-footer .gym-footer-r h3 {
-    margin-left: 10px;
-  }
-  .gym-footer .gym-footer-l {
-    margin-top: 0px;
-    min-height: 300px;
-  }
-  .gym-footer .gym-footer-l h3 {
-    margin-right: 0px;
+    padding-bottom: 20px;
   }
 }
